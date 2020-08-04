@@ -1,0 +1,20 @@
+scripts:
+  start:
+    desc: Runs the server
+    allow:
+      - read
+      - write
+      - run
+      - net
+    cmd:
+      - deno fmt
+      - deno lint --unstable
+      - deno run --unstable https://deno.land/x/denon@2.3.0/denon.ts run --allow-net --allow-read /home/mover333/deno-react-accelerator/server.ts
+
+  fmt:
+    desc: Formats code
+    cmd: deno fmt
+
+  lint:
+    desc: Lints code
+    cmd: deno lint --unstable
