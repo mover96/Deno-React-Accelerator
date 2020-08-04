@@ -3,7 +3,6 @@ import { Application, Router, send } from "./deps.ts";
 const router = new Router();
 router
   .get("/", async (context) => {
-    console.log();
     try {
       await send(context, context.request.url.pathname, {
         root: `${Deno.cwd()}/src`,

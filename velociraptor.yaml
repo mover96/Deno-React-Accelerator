@@ -9,6 +9,7 @@ scripts:
     cmd:
       - deno fmt
       - deno lint --unstable
+      - deno run --unstable resetDist.ts
       - deno run --unstable https://deno.land/x/denon@2.3.0/denon.ts run --allow-net --allow-read /home/mover333/deno-react-accelerator/server.ts
 
   fmt:
@@ -18,3 +19,14 @@ scripts:
   lint:
     desc: Lints code
     cmd: deno lint --unstable
+
+  clean:
+    desc: Cleans
+    allow:
+      - read
+      - write
+    cmd: deno run --unstable resetDist.ts
+
+  build:
+    desc: Bundles
+    cmd: deno bundle
